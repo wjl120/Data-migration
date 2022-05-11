@@ -108,37 +108,41 @@ https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#Laun
 ![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent7.png)
 激活agent, 得到下面这样的key,然后创建agent:
 ![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent8.png)
-![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent9.png)
+
 
 
 6. 创建源location：
 
-
-[Image: image.png]
-[Image: image.png]创建destination location:y
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/slocation1.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/slocation2.png)
+创建destination location:
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/dlocation1.png)
 
 
 7. 创建task
 
-[Image: image.png]配置源location:
-[Image: image.png]配置目标location:
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task1.png)
+配置源location:
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task2.png)
+配置目标location:
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task3.png)
 8. 设置其它配置
 
-[Image: image.png][Image: image.png][Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task4.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task5.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task6.png)
 
 9. 最后创建并启动任务
 
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task7.png)
 
 
 10. 监控任务执行
 
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task8.png)
 11. 结果
 
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/task9.png)
 ## 结论
 
 Datasync可以满足客户对于同步存量数据和增量数据从GCS到S3的功能，并有如下优势：
