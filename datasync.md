@@ -29,7 +29,7 @@ AWS DataSync 能够从与 S3 兼容的对象存储传输文件。 Google Cloud (
 
 * **任务执行(Task Execution)**– 任务的单独运行，包括开始时间、结束时间、写入的字节数和状态等信息。
 
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E5%9B%BE.png)
 # 前提条件
 
 * AWS CLI  
@@ -43,27 +43,31 @@ AWS DataSync 能够从与 S3 兼容的对象存储传输文件。 Google Cloud (
 
 1. GCP中创建Service account
 
-[Image: image.png]
-1. 为CLoud Storage创建服务账号的密钥
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/service%20account1.png)
+2. 为CLoud Storage创建服务账号的密钥
 
 
-[Image: image.png][Image: image.png]选择之前创建的Service account:
-[Image: image.png]
-1. 注意保留生成的密钥：
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/Service%20account2.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/Service%20account3.png)
+选择之前创建的Service account:
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/Service%20account4.png)
+3. 注意保留生成的密钥：
 
 访问密钥：GOOG1EC3BLJN4DC3KRXDW7B2TMLK23K3T2NZBTSC6QZAXWGBZNOVOL75I
 密钥：KoWx1l+oFQ2XCvWUK47fEisCRumqhW2sbB/
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/Service%20account5.png)
 ## 
 
-1. 创建VPC endpoint:
+4. 创建VPC endpoint:
 
 
-[Image: image.png][Image: image.png]
-[Image: image.png]
-[Image: image.png]注意，安全组的端口要记得对互联网开放80和22，同时对安全组自己要开放：
-[Image: image.png][Image: image.png]
-1. 安装agent所需要的EC2:
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/vpcendpoint1.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/vpcendpoint2.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/vpcendpoint3.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/vpcendpoint4.png)注意，安全组的端口要记得对互联网开放80和22，同时对安全组自己要开放：
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/vpcendpoint5.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/vpcendpoint6.png)
+5. 安装agent所需要的EC2:
 
 在AWS的EC2上或具备aws cli执行的环境中，执行如下命令（注意替换红字）：
 
@@ -92,19 +96,22 @@ aws ssm get-parameter --name /aws/service/datasync/ami --region us-east-1
 https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id
 ```
 
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent1.png)
 记得不要选小于M5.2xlarge的机型。
-[Image: image.png][Image: image]注意安全组的选择：
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent2.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent3.png)注意安全组的选择：
 要22和80端口可以让公网访问，同时endpoint 和你的ec2的安全组最好配置为一个，这样减少配置，里面把本安全组自己配置进去。
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent4.png)
 在DataSync中创建agent：
-[Image: image.png][Image: image.png][Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent5.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent6.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent7.png)
 激活agent, 得到下面这样的key,然后创建agent:
-[Image: image.png]
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent8.png)
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/agent9.png)
 
 
-
-1. 创建源location：
+6. 创建源location：
 
 
 [Image: image.png]
@@ -112,24 +119,24 @@ https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#Laun
 [Image: image.png]
 
 
-1. 创建task
+7. 创建task
 
 [Image: image.png]配置源location:
 [Image: image.png]配置目标location:
 [Image: image.png]
-1. 设置其它配置
+8. 设置其它配置
 
 [Image: image.png][Image: image.png][Image: image.png]
 
-1. 最后创建并启动任务
+9. 最后创建并启动任务
 
 [Image: image.png]
 
 
-1. 监控任务执行
+10. 监控任务执行
 
 [Image: image.png]
-1. 结果
+11. 结果
 
 [Image: image.png]
 ## 结论
