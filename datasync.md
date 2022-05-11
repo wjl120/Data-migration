@@ -15,7 +15,7 @@ AWS DataSync 能够从与 S3 兼容的对象存储传输文件。 Google Cloud (
 
 # 架构
 
-[https://quip-amazon.com/2eCJADsH7X3n/DataSync-GCSAmazon-S3#temp:C:WRA5f1715a1885a4072a6a108d98]AWS DataSync 使用 S3 互操作性 XML API 连接到您的 GCS 存储桶。 它使用 HMAC AccessKey 和 SecretKey 进行身份验证，并同步任务中定义的数据。 在 AWS 区域中，AWS DataSync 代理部署为 Amazon EC2 实例，代理使用 VPC Endpoint 连接到 AWS DataSync 服务以在同一子网内移动数据，从而避免任何跨 AZ 或跨区域费用 在 AWS 内。 代理从 GCS 读取数据，将其发送到 AWS DataSync 服务，然后将数据推送到 S3 存储桶。
+![Image](https://github.com/wjl120/Data-migration/blob/main/images/Datasync%20%E6%9E%B6%E6%9E%84%E5%9B%BE.png)AWS DataSync 使用 S3 互操作性 XML API 连接到您的 GCS 存储桶。 它使用 HMAC AccessKey 和 SecretKey 进行身份验证，并同步任务中定义的数据。 在 AWS 区域中，AWS DataSync 代理部署为 Amazon EC2 实例，代理使用 VPC Endpoint 连接到 AWS DataSync 服务以在同一子网内移动数据，从而避免任何跨 AZ 或跨区域费用 在 AWS 内。 代理从 GCS 读取数据，将其发送到 AWS DataSync 服务，然后将数据推送到 S3 存储桶。
 
 ## DataSync的组件介绍:
 
