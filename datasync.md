@@ -53,8 +53,8 @@ AWS DataSync 能够从与 S3 兼容的对象存储传输文件。 Google Cloud (
 ![Image](https://github.com/wjl120/Data-migration/blob/main/images/Service%20account4.png)
 3. 注意保留生成的密钥：
 
-访问密钥：GOOG1EC3BLJN4DC3KRXDW7B2TMLK23K3T2NZBTSC6QZAXWGBZNOVOL75I
-密钥：KoWx1l+oFQ2XCvWUK47fEisCRumqhW2sbB/
+访问密钥：GOOG1EC3BXXXXXXXXXLJN4DC3KRXDW7B2TMLK23KQZAXWGBZNOVOL75I
+密钥：KoWx1lXXXXXXXXXXK47fEisCRumqhW2sbB/
 ![Image](https://github.com/wjl120/Data-migration/blob/main/images/Service%20account5.png)
 ## 
 
