@@ -1,4 +1,4 @@
-# 使用DataSync 同步GCS数据到Amazon S3
+# 使用AWS DataSync 同步GCS数据到Amazon S3
 
 # 背景
 
@@ -166,3 +166,6 @@ AWS DataSync 带有内置的调度机制，使您能够定期执行数据传输�
 * 自动基础架构管理 
 
 AWS DataSync 消除了您在编写、优化和管理自己的复制脚本或部署和调整重量级商业传输工具时面临的许多基础设施和管理挑战。 DataSync 带有内置的监控和重试机制，以及对用于传输数据的网络带宽部分的精细控制。
+
+## 参考资料
+https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html
