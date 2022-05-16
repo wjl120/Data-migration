@@ -2,7 +2,6 @@
 
 # 背景
 
-客户需要将GCP的Cloud Storage 的存量和增量数据和同步到Amazon S3做数据分析,但没有一个好用的数据迁移工具,rclone需要写脚本和定期人工检查，工作量大，且无法保证质量，因此想测试一下Datasync。
 AWS DataSync 能够从与 S3 兼容的对象存储传输文件。 Google Cloud (GCP) 使用其互操作性 XML API 支持其 Google Cloud Storage (GCS) 产品的 S3 API。 本文档中的过程将指导您完成将数据从 GCS 存储桶传输到 AWS 上的 S3 存储桶的过程。
 
 # 需求
